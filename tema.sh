@@ -1,13 +1,15 @@
 #! /bin/bash
 
-# display current user
-echo "Current user is: $USER"
+# available and used memory
+echo "-----AVAILABLE AND USED MEMORY-----"
+echo "$(cat /proc/meminfo)"
+echo ""
 
-# display current working directory
-echo "Current working directory is: $(pwd)"
+# amount of physical and swap memory
+echo "-----AMOUNT PHYSICAL AND SWAP MEMORY-----"
+echo "$(free)"
+echo ""
 
-# display all files in current directory
-echo -e "Files in current directory are: \n$(ls)"
-
-# display current date
-echo "Current date is: $(date)"
+# virtual memory statistic
+echo "-----VIRTUAL MEMORY STATISTIC-----"
+echo "$(vmstat)"
